@@ -23,7 +23,7 @@ body {
     width: 90%;
     max-width: 400px;
     background-color: #222;
-    // border: 1px solid white;
+    border: 1px solid white;
     vertical-align:top;
     margin: auto;
     padding: 10px;
@@ -33,12 +33,18 @@ body {
 
 }
 
-.displayCell {
+.cell {
 
     table {
         display: table;
         // width: 100%;
-        border: 1px solid lime;
+        // border: 1px solid lime;
+        vertical-align: top;
+
+        td {
+            border: 1px solid red;
+            line-height: 40px;
+        }
 
         &.pronouns {
             width: 70px;

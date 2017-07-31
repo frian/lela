@@ -4,9 +4,13 @@
 
     {{ form_start(form) }}
 
-    <div class="cell formCell">
+
+    <div class="cell displayCell headerCell">
 
         <h1>Verb creation</h1>
+
+    </div>
+
 
         <table>
             <tr>
@@ -23,64 +27,83 @@
 
     {% for conjugation in form.conjugations %}
 
-    <h2>{{ conjugation.vars.value.time }}</h2>
 
-    <div class="cell formCell">
+    <div class="cell displayCell">
 
-        <table class="formTable">
-            <tr>
-                <td>
-                    {{ 'I' | trans }}
-                </td>
-                <td>
-                    {{ form_widget(conjugation.firstSing) }}
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    {{ 'You' | trans }}
-                </td>
-                <td>
-                    {{ form_widget(conjugation.secondSing) }}
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    {{ 'He/she' | trans }}
-                </td>
-                <td>
-                    {{ form_widget(conjugation.thirdSing) }}
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    {{ 'We' | trans }}
-                </td>
-                <td>
-                    {{ form_widget(conjugation.firstPlur) }}
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    {{ 'You' | trans }}
-                </td>
-                <td>
-                    {{ form_widget(conjugation.secondPlur) }}
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    {{ 'They' | trans }}
-                </td>
-                <td>
-                    {{ form_widget(conjugation.thirdPlur) }}
-                </td>
-            </tr>
-        </table>
+        <h2>{{ conjugation.vars.value.time }}</h2>
+
+        <div class="inlineTable">
+            <table class="pronouns">
+                <tr>
+                    <td>
+                        {{ 'I' | trans }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ 'You' | trans }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ 'He/she' | trans }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ 'We' | trans }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ 'You' | trans }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ 'They' | trans }}
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="inlineTable">
+            <table class="conjugation">
+                <tr>
+                    <td>
+                        {{ form_widget(conjugation.firstSing) }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ form_widget(conjugation.secondSing) }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ form_widget(conjugation.thirdSing) }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ form_widget(conjugation.firstPlur) }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ form_widget(conjugation.secondPlur) }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ form_widget(conjugation.thirdPlur) }}
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
     {% endfor %}
 
-    <div class="cell formCell">
+    <div class="cell displayCell">
 
         <input type="submit" value="Create" />
 
