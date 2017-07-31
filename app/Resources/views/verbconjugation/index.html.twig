@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Verbconjugations list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Time</th>
+                <th>Firstsing</th>
+                <th>Secondsing</th>
+                <th>Thirdsing</th>
+                <th>Firstplur</th>
+                <th>Secondplur</th>
+                <th>Thirdplur</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for verbConjugation in verbConjugations %}
+            <tr>
+                <td><a href="{{ path('verbconjugation_show', { 'id': verbConjugation.id }) }}">{{ verbConjugation.id }}</a></td>
+                <td>{{ verbConjugation.time }}</td>
+                <td>{{ verbConjugation.firstSing }}</td>
+                <td>{{ verbConjugation.secondSing }}</td>
+                <td>{{ verbConjugation.thirdSing }}</td>
+                <td>{{ verbConjugation.firstPlur }}</td>
+                <td>{{ verbConjugation.secondPlur }}</td>
+                <td>{{ verbConjugation.thirdPLur }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('verbconjugation_show', { 'id': verbConjugation.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('verbconjugation_edit', { 'id': verbConjugation.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('verbconjugation_new') }}">Create a new verbConjugation</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,105 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="displayCell">
+
+        <h1>Verb</h1>
+
+        {{ verb.name }}
+
+    </div>
+
+    <div class="displayCell hideOnXs">
+
+        <table>
+            <tr>
+                <td>{{ 'I' | trans }}</td>
+            </tr>
+            <tr>
+                <td>{{ 'You' | trans }}</td>
+            </tr>
+            <tr>
+                <td>{{ 'He/she' | trans }}</td>
+            </tr>
+            <tr>
+                <td>{{ 'We' | trans }}</td>
+            </tr>
+            <tr>
+                <td>{{ 'You' | trans }}</td>
+            </tr>
+            <tr>
+                <td>{{ 'They' | trans }}</td>
+            </tr>
+        </table>
+
+    </div>
+
+
+    {% for conjugation in verb.conjugations %}
+    <div class="displayCell">
+        <div class="inlineTable">
+            <table class="pronouns">
+                <tr>
+                    <td>{{ 'I' | trans }}</td>
+                </tr>
+                <tr>
+                    <td>{{ 'You' | trans }}</td>
+                </tr>
+                <tr>
+                    <td>{{ 'He/she' | trans }}</td>
+                </tr>
+                <tr>
+                    <td>{{ 'We' | trans }}</td>
+                </tr>
+                <tr>
+                    <td>{{ 'You' | trans }}</td>
+                </tr>
+                <tr>
+                    <td>{{ 'They' | trans }}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="inlineTable">
+            <table class="conjugation">
+                <tr>
+                    <td>{{ conjugation.firstSing }}</td>
+                </tr>
+                <tr>
+                    <td>{{ conjugation.secondSing }}</td>
+                </tr>
+                <tr>
+                    <td>{{ conjugation.thirdSing }}</td>
+                </tr>
+                <tr>
+                    <td>{{ conjugation.firstPlur }}</td>
+                </tr>
+                <tr>
+                    <td>{{ conjugation.secondPlur }}</td>
+                </tr>
+                <tr>
+                    <td>{{ conjugation.thirdPLur }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    {% endfor %}
+
+
+    <div class="displayCell">
+        <ul>
+            <li>
+                <a href="{{ path('verb_index') }}">Back to the list</a>
+            </li>
+            <li>
+                <a href="{{ path('verb_edit', { 'id': verb.id }) }}">Edit</a>
+            </li>
+            <li>
+                {{ form_start(delete_form) }}
+                    <input type="submit" value="Delete">
+                {{ form_end(delete_form) }}
+            </li>
+        </ul>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Verbconjugation</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ verbConjugation.id }}</td>
+            </tr>
+            <tr>
+                <th>Time</th>
+                <td>{{ verbConjugation.time }}</td>
+            </tr>
+            <tr>
+                <th>Firstsing</th>
+                <td>{{ verbConjugation.firstSing }}</td>
+            </tr>
+            <tr>
+                <th>Secondsing</th>
+                <td>{{ verbConjugation.secondSing }}</td>
+            </tr>
+            <tr>
+                <th>Thirdsing</th>
+                <td>{{ verbConjugation.thirdSing }}</td>
+            </tr>
+            <tr>
+                <th>Firstplur</th>
+                <td>{{ verbConjugation.firstPlur }}</td>
+            </tr>
+            <tr>
+                <th>Secondplur</th>
+                <td>{{ verbConjugation.secondPlur }}</td>
+            </tr>
+            <tr>
+                <th>Thirdplur</th>
+                <td>{{ verbConjugation.thirdPLur }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('verbconjugation_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('verbconjugation_edit', { 'id': verbConjugation.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

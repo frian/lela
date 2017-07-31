@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Verbconjugation creation</h1>
+
+    {{ form_start(form) }}
+
+{{ dump(form.vars.value) }}
+
+    <table>
+        <tr>
+            <td>
+                {{ form_label(form.firstSing) }} >{{ form.vars.value.time }}<
+            </td>
+            <td>
+                {{ form_widget(form.firstSing) }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{ form_label(form.secondSing) }}
+            </td>
+            <td>
+                {{ form_widget(form.secondSing) }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{ form_label(form.thirdSing) }}
+            </td>
+            <td>
+                {{ form_widget(form.thirdSing) }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{ form_label(form.firstPlur) }}
+            </td>
+            <td>
+                {{ form_widget(form.firstPlur) }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{ form_label(form.secondPlur) }}
+            </td>
+            <td>
+                {{ form_widget(form.secondPlur) }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{ form_label(form.thirdPlur) }}
+            </td>
+            <td>
+                {{ form_widget(form.thirdPlur) }}
+            </td>
+        </tr>
+    </table>
+
+
+        <input type="submit" value="Create" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('verbconjugation_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,112 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+a { color: #ccc}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: arial;
+    text-align: center;
+}
+
+#frame {
+    border: 1px solid red;
+    // display: inline-block;
+    margin: auto;
+}
+
+.formCell {
+    // height: 300px;
+    display: block;
+    width: 90%;
+    max-width: 400px;
+    background-color: #222;
+    // border: 1px solid white;
+    vertical-align:top;
+    margin: auto;
+    padding: 10px;
+}
+
+.displayCell {
+    display: inline-block;
+    background-color: #222;
+    border: 1px solid white;
+    vertical-align:top;
+    padding: 0 20px;
+    margin: 0;
+    width: 300px;
+
+    table {
+        display: table;
+
+        &.pronouns {
+            width: 70px;
+        }
+
+        &.conjugation {
+            width: 200px;
+            border: 1px solid lime;
+
+            td {
+                font-weight: bold;
+                width: 100%;
+            }
+        }
+    }
+}
+.inlineTable {
+    display: inline-block;
+}
+
+.hideOnXs {
+    display: none;
+}
+
+
+
+
+
+
+.displayPronounsCell {
+    display: inline-block;
+    background-color: #222;
+    // border: 1px solid white;
+    vertical-align:top;
+    padding: 0 0 0 20px;
+}
+
+table {
+    display: table;
+    margin: 20px auto;
+    // border-spacing : 0;
+    // border-collapse : collapse;
+    // border: 1px solid white;
+}
+
+tbody {
+    border: 5px color red;
+    width: 100%;
+}
+
+td {
+    border: 1px solid #ccc;
+}
+
+input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.formTable {
+    width: 100%;
+    border: 1px solid lime;
+}
+
+.formTable td:nth-child(2) {
+    text-align: center;
+}

@@ -1,0 +1,98 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {{ form_start(form) }}
+
+    <div class="formCell">
+
+        <h1>Verb creation</h1>
+
+        <table>
+            <tr>
+                <td>
+                    {{ form_label(form.name) }}
+                </td>
+                <td>
+                    {{ form_widget(form.name) }}
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+    {% for conjugation in form.conjugations %}
+
+    <h2>{{ conjugation.vars.value.time }}</h2>
+
+    <div class="formCell">
+
+        <table class="formTable">
+            <tr>
+                <td>
+                    {{ 'I' | trans }}
+                </td>
+                <td>
+                    {{ form_widget(conjugation.firstSing) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ 'You' | trans }}
+                </td>
+                <td>
+                    {{ form_widget(conjugation.secondSing) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ 'He/she' | trans }}
+                </td>
+                <td>
+                    {{ form_widget(conjugation.thirdSing) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ 'We' | trans }}
+                </td>
+                <td>
+                    {{ form_widget(conjugation.firstPlur) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ 'You' | trans }}
+                </td>
+                <td>
+                    {{ form_widget(conjugation.secondPlur) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ 'They' | trans }}
+                </td>
+                <td>
+                    {{ form_widget(conjugation.thirdPlur) }}
+                </td>
+            </tr>
+        </table>
+    </div>
+    {% endfor %}
+
+    <div class="formCell">
+
+        <input type="submit" value="Create" />
+
+        <ul>
+            <li>
+                <a href="{{ path('verb_index') }}">Back to the list</a>
+            </li>
+        </ul>
+
+    </div>
+
+    {{ form_end(form) }}
+
+
+{% endblock %}
