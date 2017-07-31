@@ -2,7 +2,7 @@
 
 {% block body %}
 
-    <div class="displayCell">
+    <div class="cell displayCell">
 
         <h1>Verb</h1>
 
@@ -10,7 +10,7 @@
 
     </div>
 
-    <div class="displayCell hideOnXs">
+    <div class="cell displayCell hideOnXs">
 
         <table>
             <tr>
@@ -37,7 +37,7 @@
 
 
     {% for conjugation in verb.conjugations %}
-    <div class="displayCell">
+    <div class="cell displayCell">
         <div class="inlineTable">
             <table class="pronouns">
                 <tr>
@@ -86,7 +86,7 @@
     {% endfor %}
 
 
-    <div class="displayCell">
+    <div class="cell displayCell">
         <ul>
             <li>
                 <a href="{{ path('verb_index') }}">Back to the list</a>

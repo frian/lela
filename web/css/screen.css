@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 5, ../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,45 +24,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -82,12 +82,11 @@ body {
 
 /* line 17, ../sass/screen.scss */
 #frame {
-  border: 1px solid red;
   margin: auto;
 }
 
-/* line 23, ../sass/screen.scss */
-.formCell {
+/* line 21, ../sass/screen.scss */
+.cell {
   display: block;
   width: 90%;
   max-width: 400px;
@@ -97,46 +96,35 @@ body {
   padding: 10px;
 }
 
-/* line 35, ../sass/screen.scss */
-.displayCell {
-  display: inline-block;
-  background-color: #222;
-  border: 1px solid white;
-  vertical-align: top;
-  padding: 0 20px;
-  margin: 0;
-  width: 300px;
-}
-/* line 44, ../sass/screen.scss */
+/* line 38, ../sass/screen.scss */
 .displayCell table {
   display: table;
+  border: 1px solid lime;
 }
-/* line 47, ../sass/screen.scss */
+/* line 43, ../sass/screen.scss */
 .displayCell table.pronouns {
   width: 70px;
 }
-/* line 51, ../sass/screen.scss */
+/* line 47, ../sass/screen.scss */
 .displayCell table.conjugation {
   width: 200px;
-  border: 1px solid lime;
 }
-/* line 55, ../sass/screen.scss */
+/* line 49, ../sass/screen.scss */
 .displayCell table.conjugation td {
   font-weight: bold;
-  width: 100%;
 }
 
-/* line 62, ../sass/screen.scss */
+/* line 56, ../sass/screen.scss */
 .inlineTable {
   display: inline-block;
 }
 
-/* line 66, ../sass/screen.scss */
+/* line 60, ../sass/screen.scss */
 .hideOnXs {
   display: none;
 }
 
-/* line 75, ../sass/screen.scss */
+/* line 65, ../sass/screen.scss */
 .displayPronounsCell {
   display: inline-block;
   background-color: #222;
@@ -144,36 +132,14 @@ body {
   padding: 0 0 0 20px;
 }
 
-/* line 83, ../sass/screen.scss */
+/* line 73, ../sass/screen.scss */
 table {
   display: table;
   margin: 20px auto;
 }
 
-/* line 91, ../sass/screen.scss */
-tbody {
-  border: 5px color red;
-  width: 100%;
-}
-
-/* line 96, ../sass/screen.scss */
-td {
-  border: 1px solid #ccc;
-}
-
-/* line 100, ../sass/screen.scss */
+/* line 78, ../sass/screen.scss */
 input[type="text"] {
   width: 100%;
   box-sizing: border-box;
-}
-
-/* line 105, ../sass/screen.scss */
-.formTable {
-  width: 100%;
-  border: 1px solid lime;
-}
-
-/* line 110, ../sass/screen.scss */
-.formTable td:nth-child(2) {
-  text-align: center;
 }

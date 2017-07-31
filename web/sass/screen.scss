@@ -15,13 +15,10 @@ body {
 }
 
 #frame {
-    border: 1px solid red;
-    // display: inline-block;
     margin: auto;
 }
 
-.formCell {
-    // height: 300px;
+.cell {
     display: block;
     width: 90%;
     max-width: 400px;
@@ -32,17 +29,16 @@ body {
     padding: 10px;
 }
 
+.formCell {
+
+}
+
 .displayCell {
-    display: inline-block;
-    background-color: #222;
-    border: 1px solid white;
-    vertical-align:top;
-    padding: 0 20px;
-    margin: 0;
-    width: 300px;
 
     table {
         display: table;
+        // width: 100%;
+        border: 1px solid lime;
 
         &.pronouns {
             width: 70px;
@@ -50,15 +46,13 @@ body {
 
         &.conjugation {
             width: 200px;
-            border: 1px solid lime;
-
             td {
                 font-weight: bold;
-                width: 100%;
             }
         }
     }
 }
+
 .inlineTable {
     display: inline-block;
 }
@@ -66,10 +60,6 @@ body {
 .hideOnXs {
     display: none;
 }
-
-
-
-
 
 
 .displayPronounsCell {
@@ -83,30 +73,9 @@ body {
 table {
     display: table;
     margin: 20px auto;
-    // border-spacing : 0;
-    // border-collapse : collapse;
-    // border: 1px solid white;
-}
-
-tbody {
-    border: 5px color red;
-    width: 100%;
-}
-
-td {
-    border: 1px solid #ccc;
 }
 
 input[type="text"] {
     width: 100%;
     box-sizing: border-box;
-}
-
-.formTable {
-    width: 100%;
-    border: 1px solid lime;
-}
-
-.formTable td:nth-child(2) {
-    text-align: center;
 }
