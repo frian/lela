@@ -55,6 +55,7 @@ body {
 
 .inlineTable {
     display: inline-block;
+    border: 1px solid white;
 }
 
 .hideOnXs {
@@ -78,4 +79,29 @@ table {
 input[type="text"] {
     width: 100%;
     box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+
+    .cell {
+        display: inline-block!important;
+        width: 40%;
+        max-width: none;
+    }
+
+    .headerCell {
+        width: 90%!important;
+    }
+}
+
+@media (min-width: 1000px) {
+
+
+}
+
+@media (min-width: 1400px) {
+
+    .cell {
+        width: 20%;
+    }
 }
