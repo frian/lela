@@ -9,9 +9,9 @@ a { color: #ccc}
 
 body {
     background-color: black;
-    color: white;
-    font-family: arial;
-    text-align: center;
+    color:            white;
+    font-family:      arial;
+    text-align:      center;
 }
 
 #frame {
@@ -19,30 +19,20 @@ body {
 }
 
 .cell {
-    display: block;
-    width: 90%;
-    max-width: 400px;
-    background-color: #222;
-    border: 1px solid white;
-    vertical-align:top;
-    margin: auto;
-    padding: 10px;
-}
-
-.formCell {
-
+    display:                    block;
+    width:                        90%;
+    max-width:                  400px;
+    background-color:            #222;
+    margin:                      auto;
+    padding:                     10px;
 }
 
 .cell {
 
     table {
         display: table;
-        // width: 100%;
-        // border: 1px solid lime;
-        vertical-align: top;
 
         td {
-            border: 1px solid red;
             line-height: 40px;
         }
 
@@ -51,7 +41,9 @@ body {
         }
 
         &.conjugation {
+
             width: 200px;
+
             td {
                 font-weight: bold;
             }
@@ -61,38 +53,38 @@ body {
 
 .inlineTable {
     display: inline-block;
-    border: 1px solid white;
 }
 
-.hideOnXs {
+
+table {
+    display:     table;
+    margin:  20px auto;
+}
+
+input[type="text"] {
+    width:            100%;
+    box-sizing: border-box;
+}
+
+
+
+
+
+.translations label {
     display: none;
 }
 
 
-.displayPronounsCell {
-    display: inline-block;
-    background-color: #222;
-    // border: 1px solid white;
-    vertical-align:top;
-    padding: 0 0 0 20px;
-}
 
-table {
-    display: table;
-    margin: 20px auto;
-}
 
-input[type="text"] {
-    width: 100%;
-    box-sizing: border-box;
-}
+
 
 @media (min-width: 768px) {
 
     .cell {
         display: inline-block!important;
-        width: 40%;
-        max-width: none;
+        width:            40%;
+        max-width:       none;
     }
 
     .headerCell {

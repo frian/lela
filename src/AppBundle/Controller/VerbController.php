@@ -5,6 +5,7 @@ namespace AppBundle\Controller;
 use AppBundle\Entity\Time;
 use AppBundle\Entity\Verb;
 use AppBundle\Entity\VerbConjugation;
+use AppBundle\Entity\VerbTranslation;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
@@ -55,6 +56,13 @@ class VerbController extends Controller
 
             $verb->getConjugations()->add($verbConjugation);
         }
+
+        $verbTranslation = new verbTranslation();
+
+        // $verbConjugation->setTime($time);
+
+        $verb->addTranslation($verbTranslation);
+
 
         $form = $this->createForm('AppBundle\Form\VerbType', $verb);
 

@@ -5,9 +5,8 @@ namespace AppBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 
-class VerbType extends AbstractType
+class VerbTranslationType extends AbstractType
 {
     /**
      * {@inheritdoc}
@@ -15,25 +14,15 @@ class VerbType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('name');
-
-        $builder->add('conjugations', CollectionType::class, array(
-            'entry_type' => VerbConjugationType::class
-        ));
-
-        $builder->add('translations', CollectionType::class, array(
-            'entry_type' => VerbTranslationType::class,
-            'allow_add'    => true,
-        ));
-
     }
-
+    
     /**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'AppBundle\Entity\Verb'
+            'data_class' => 'AppBundle\Entity\VerbTranslation'
         ));
     }
 
@@ -42,7 +31,7 @@ class VerbType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'appbundle_verb';
+        return 'appbundle_verbtranslation';
     }
 
 

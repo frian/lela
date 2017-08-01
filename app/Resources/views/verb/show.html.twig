@@ -8,9 +8,24 @@
 
     </div>
 
+    <div class="cell displayCell headerCell">
+
+
+
+        {% for translation in verb.translations %}
+
+            {{ translation.name }}{% if not loop.last %}, {% endif %}
+
+        {% endfor %}
+
+    </div>
+
 
     {% for conjugation in verb.conjugations %}
     <div class="cell displayCell">
+
+        <h2>{{ conjugation.time }}</h2>
+
         <div class="inlineTable">
             <table class="pronouns">
                 <tr>

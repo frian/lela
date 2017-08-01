@@ -12,22 +12,38 @@
     </div>
 
 
+    <div class="cell displayCell headerCell">
         <table>
             <tr>
                 <td>
                     {{ form_label(form.name) }}
                 </td>
+
+            </tr>
+            <tr>
                 <td>
                     {{ form_widget(form.name) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ form_label(form.translations) }}
+                </td>
+            </tr>
+            <tr>
+
+                <td class="translations" data-prototype="{{ form_widget(form.translations.vars.prototype)|e('html_attr') }}">
+                    {% for translation in form.translations %}
+                        <div>{{ form_widget(translation.name) }}</div>
+                    {% endfor %}
                 </td>
             </tr>
         </table>
 
     </div>
 
+
     {% for conjugation in form.conjugations %}
-
-
     <div class="cell displayCell">
 
         <h2>{{ conjugation.vars.value.time }}</h2>
@@ -103,6 +119,7 @@
     </div>
     {% endfor %}
 
+
     <div class="cell displayCell">
 
         <input type="submit" value="Create" />
@@ -115,7 +132,7 @@
 
     </div>
 
-    {{ form_end(form) }}
 
+    {{ form_end(form) }}
 
 {% endblock %}

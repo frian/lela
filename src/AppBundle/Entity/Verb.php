@@ -35,6 +35,12 @@ class Verb
     protected $conjugations;
 
 
+    /**
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\VerbTranslation", cascade={"persist"})
+     */
+    protected $translations;
+
+
     public function __toString() {
         return $this->name;
     }
@@ -125,5 +131,39 @@ class Verb
     public function removeConjugation(\AppBundle\Entity\VerbConjugation $conjugation)
     {
         $this->conjugations->removeElement($conjugation);
+    }
+
+    /**
+     * Add translation
+     *
+     * @param \AppBundle\Entity\VerbTranslation $translation
+     *
+     * @return Verb
+     */
+    public function addTranslation(\AppBundle\Entity\VerbTranslation $translation)
+    {
+        $this->translations[] = $translation;
+
+        return $this;
+    }
+
+    /**
+     * Remove translation
+     *
+     * @param \AppBundle\Entity\VerbTranslation $translation
+     */
+    public function removeTranslation(\AppBundle\Entity\VerbTranslation $translation)
+    {
+        $this->translations->removeElement($translation);
+    }
+
+    /**
+     * Get translations
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getTranslations()
+    {
+        return $this->translations;
     }
 }

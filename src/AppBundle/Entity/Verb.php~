@@ -35,6 +35,12 @@ class Verb
     protected $conjugations;
 
 
+    /**
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\VerbTranslation", cascade={"persist"})
+     */
+    protected $translations;
+
+
     public function __toString() {
         return $this->name;
     }
