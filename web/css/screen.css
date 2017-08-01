@@ -81,11 +81,21 @@ body {
 }
 
 /* line 17, ../sass/screen.scss */
+h1 {
+  font-size: 2em;
+}
+
+/* line 21, ../sass/screen.scss */
+h2 {
+  font-size: 1.6em;
+}
+
+/* line 25, ../sass/screen.scss */
 #frame {
   margin: auto;
 }
 
-/* line 21, ../sass/screen.scss */
+/* line 29, ../sass/screen.scss */
 .cell {
   display: block;
   width: 90%;
@@ -95,64 +105,64 @@ body {
   padding: 10px;
 }
 
-/* line 32, ../sass/screen.scss */
+/* line 40, ../sass/screen.scss */
 .cell table {
   display: table;
 }
-/* line 35, ../sass/screen.scss */
+/* line 43, ../sass/screen.scss */
 .cell table td {
   line-height: 40px;
 }
-/* line 39, ../sass/screen.scss */
+/* line 47, ../sass/screen.scss */
 .cell table.pronouns {
   width: 70px;
 }
-/* line 43, ../sass/screen.scss */
+/* line 51, ../sass/screen.scss */
 .cell table.conjugation {
   width: 200px;
 }
-/* line 47, ../sass/screen.scss */
+/* line 55, ../sass/screen.scss */
 .cell table.conjugation td {
   font-weight: bold;
 }
 
-/* line 54, ../sass/screen.scss */
+/* line 62, ../sass/screen.scss */
 .inlineTable {
   display: inline-block;
 }
 
-/* line 59, ../sass/screen.scss */
+/* line 67, ../sass/screen.scss */
 table {
   display: table;
   margin: 20px auto;
 }
 
-/* line 64, ../sass/screen.scss */
+/* line 72, ../sass/screen.scss */
 input[type="text"] {
   width: 100%;
   box-sizing: border-box;
 }
 
-/* line 73, ../sass/screen.scss */
+/* line 81, ../sass/screen.scss */
 .translations label {
   display: none;
 }
 
 @media (min-width: 768px) {
-  /* line 84, ../sass/screen.scss */
+  /* line 92, ../sass/screen.scss */
   .cell {
     display: inline-block !important;
     width: 40%;
     max-width: none;
   }
 
-  /* line 90, ../sass/screen.scss */
+  /* line 98, ../sass/screen.scss */
   .headerCell {
     width: 90% !important;
   }
 }
 @media (min-width: 1400px) {
-  /* line 102, ../sass/screen.scss */
+  /* line 110, ../sass/screen.scss */
   .cell {
     width: 20%;
   }
