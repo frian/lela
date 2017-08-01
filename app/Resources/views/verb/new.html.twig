@@ -2,14 +2,14 @@
 
 {% block body %}
 
-    {{ form_start(form) }}
-
-
     <div class="cell displayCell headerCell">
 
         <h1>Verb creation</h1>
 
     </div>
+
+
+    {{ form_start(form) }}
 
 
     <div class="cell displayCell headerCell">
@@ -39,7 +39,6 @@
                 </td>
             </tr>
         </table>
-
     </div>
 
 
@@ -49,72 +48,10 @@
         <h2>{{ conjugation.vars.value.time }}</h2>
 
         <div class="inlineTable">
-            <table class="pronouns">
-                <tr>
-                    <td>
-                        {{ 'I' | trans }}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        {{ 'You' | trans }}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        {{ 'He/she' | trans }}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        {{ 'We' | trans }}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        {{ 'You' | trans }}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        {{ 'They' | trans }}
-                    </td>
-                </tr>
-            </table>
+            {{ include('verb/pronouns.html.twig') }}
         </div>
         <div class="inlineTable">
-            <table class="conjugation">
-                <tr>
-                    <td>
-                        {{ form_widget(conjugation.firstSing) }}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        {{ form_widget(conjugation.secondSing) }}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        {{ form_widget(conjugation.thirdSing) }}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        {{ form_widget(conjugation.firstPlur) }}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        {{ form_widget(conjugation.secondPlur) }}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        {{ form_widget(conjugation.thirdPlur) }}
-                    </td>
-                </tr>
-            </table>
+            {{ include('verb/conjugations.html.twig') }}
         </div>
     </div>
     {% endfor %}

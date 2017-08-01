@@ -8,14 +8,11 @@
 
     </div>
 
+
     <div class="cell displayCell headerCell">
 
-
-
         {% for translation in verb.translations %}
-
             {{ translation.name }}{% if not loop.last %}, {% endif %}
-
         {% endfor %}
 
     </div>
@@ -27,26 +24,7 @@
         <h2>{{ conjugation.time }}</h2>
 
         <div class="inlineTable">
-            <table class="pronouns">
-                <tr>
-                    <td>{{ 'I' | trans }}</td>
-                </tr>
-                <tr>
-                    <td>{{ 'You' | trans }}</td>
-                </tr>
-                <tr>
-                    <td>{{ 'He/she' | trans }}</td>
-                </tr>
-                <tr>
-                    <td>{{ 'We' | trans }}</td>
-                </tr>
-                <tr>
-                    <td>{{ 'You' | trans }}</td>
-                </tr>
-                <tr>
-                    <td>{{ 'They' | trans }}</td>
-                </tr>
-            </table>
+            {{ include('verb/pronouns.html.twig') }}
         </div>
         <div class="inlineTable">
             <table class="conjugation">

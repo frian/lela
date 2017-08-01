@@ -1,0 +1,11 @@
+verb:
+    pronoun:
+        first:
+            sing: Io
+            plur: Noi
+        second:
+            sing: Tu
+            plur: Voi
+        third:
+            sing: Lui/lei
+            plur: Loro

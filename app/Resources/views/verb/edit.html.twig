@@ -1,21 +1,72 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Verb edit</h1>
+
+    <div class="cell displayCell headerCell">
+        <h1>Verb edition</h1>
+    </div>
+
 
     {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
+
+
+    <div class="cell displayCell headerCell">
+        <table>
+            <tr>
+                <td>
+                    {{ form_label(edit_form.name) }}
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    {{ form_widget(edit_form.name) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ form_label(edit_form.translations) }}
+                </td>
+            </tr>
+            <tr>
+
+                <td class="translations" data-prototype="{{ form_widget(edit_form.translations.vars.prototype)|e('html_attr') }}">
+                    {% for translation in edit_form.translations %}
+                        <div>{{ form_widget(translation.name) }}</div>
+                    {% endfor %}
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+    {% for conjugation in edit_form.conjugations %}
+    <div class="cell displayCell">
+
+        <h2>{{ conjugation.vars.value.time }}</h2>
+
+        <div class="inlineTable">
+            {{ include('verb/pronouns.html.twig') }}
+        </div>
+        <div class="inlineTable">
+            {{ include('verb/conjugations.html.twig') }}
+        </div>
+    </div>
+    {% endfor %}
+
+
+    <div class="cell displayCell">
+
         <input type="submit" value="Edit" />
+
+        <ul>
+            <li>
+                <a href="{{ path('verb_index') }}">Back to the list</a>
+            </li>
+        </ul>
+    </div>
+
+
     {{ form_end(edit_form) }}
 
-    <ul>
-        <li>
-            <a href="{{ path('verb_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
 {% endblock %}
