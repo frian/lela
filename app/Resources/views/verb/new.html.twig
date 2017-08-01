@@ -2,7 +2,7 @@
 
 {% block body %}
 
-    <div class="cell displayCell headerCell">
+    <div class="cell headerCell">
 
         <h1>add verb</h1>
 
@@ -12,7 +12,7 @@
     {{ form_start(form) }}
 
 
-    <div class="cell displayCell headerCell">
+    <div class="cell headerCell">
         <table>
             <tr>
                 <td>
@@ -31,7 +31,6 @@
                 </td>
             </tr>
             <tr>
-
                 <td class="translations" data-prototype="{{ form_widget(form.translations.vars.prototype)|e('html_attr') }}">
                     {% for translation in form.translations %}
                         <div>{{ form_widget(translation.name) }}</div>
@@ -43,7 +42,7 @@
 
 
     {% for conjugation in form.conjugations %}
-    <div class="cell displayCell">
+    <div class="cell">
 
         <h2>{{ conjugation.vars.value.time }}</h2>
 
@@ -57,7 +56,7 @@
     {% endfor %}
 
 
-    <div class="cell displayCell">
+    <div class="cell">
 
         <input type="submit" value="Create" />
 

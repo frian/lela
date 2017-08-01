@@ -5,7 +5,7 @@ $(function() {
 
     // setup an "add a translation" link
     var $addTranslationLink = $('<a href="#" class="add_Translation_link">Add a translation</a>');
-    var $newLinkDiv = $('<div></div>').append($addTranslationLink);
+    var $newLinkDiv = $('<div class="control"></div>').append($addTranslationLink);
 
     // Get the td that holds the collection of translations
     $collectionHolder = $('td.translations');

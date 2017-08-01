@@ -2,7 +2,7 @@
 
 {% block body %}
 
-    <div class="cell displayCell headerCell">
+    <div class="cell headerCell">
         <h1>edit verb</h1>
     </div>
 
@@ -10,7 +10,7 @@
     {{ form_start(edit_form) }}
 
 
-    <div class="cell displayCell headerCell">
+    <div class="cell headerCell">
         <table>
             <tr>
                 <td>
@@ -41,7 +41,7 @@
 
 
     {% for conjugation in edit_form.conjugations %}
-    <div class="cell displayCell">
+    <div class="cell">
 
         <h2>{{ conjugation.vars.value.time }}</h2>
 
@@ -55,7 +55,7 @@
     {% endfor %}
 
 
-    <div class="cell displayCell">
+    <div class="cell">
 
         <input type="submit" value="Edit" />
 
