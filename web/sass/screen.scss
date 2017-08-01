@@ -8,14 +8,18 @@
 
 * { box-sizing: border-box; }
 
-input[type="submit"], a {
+a.indexLink {
+    color: #eee;
+    text-decoration: none;
+}
+
+input[type="submit"], a:not(.indexLink) {
     color: #ccc;
     border: 2px solid #ccc;
     height: 50px;
     line-height: 50px;
     padding: 0 20px;
     display: inline-block;
-    // padding: 10px 0;
     margin: 20px auto;
     top: 50px;
     text-decoration: none;
@@ -25,7 +29,7 @@ input[type="submit"], a {
     font-size: 0.8em;
 }
 
-input[type="submit"]:hover, a:hover {
+input[type="submit"]:hover, a:not(.indexLink):hover {
     color: #ddd;
     background-color: #111;
 }
@@ -36,7 +40,7 @@ body {
     color:            #eee;
     font-family:      arial;
     text-align:      center;
-    font-size:         18px;
+    font-size:         20px;
     width: 100%;
 }
 
@@ -67,13 +71,39 @@ h3 {
     font-size: 0;
 }
 
+table {
+    font-size: 20px;
+
+    &.index {
+        // border: 1px solid lime;
+        width: 100%;
+
+        max-width: 1000px;
+
+        td {
+            a {
+                display: block;
+                padding: 10px 20px;
+                // border: 1px solid yellow;
+            }
+        }
+
+        tr:nth-child(odd) td a {
+            // color: #fff;
+            background-color: #161616;
+        }
+    }
+}
+
+
+
 .cell {
     display:                    block;
     width:                       100%;
     margin:                    0;
     padding: 0;
     border: 1px solid #666;
-    font-size: 20px;;
+    font-size: 20px;
 }
 
 .cell {

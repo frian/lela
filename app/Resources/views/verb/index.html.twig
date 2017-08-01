@@ -1,39 +1,31 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Verbs list</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
+    <div class="cell headerCell">
+
+        <h1>verbs index</h1>
+
+    </div>
+
+    <table class="index">
         <tbody>
         {% for verb in verbs %}
             <tr>
-                <td><a href="{{ path('verb_show', { 'id': verb.id }) }}">{{ verb.id }}</a></td>
-                <td>{{ verb.name }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('verb_show', { 'id': verb.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('verb_edit', { 'id': verb.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
+                <td><a class="indexLink" href="{{ path('verb_show', { 'id': verb.id }) }}">{{ verb.name }}</a></td>
+                <!-- <td>{{ verb.name }}</td> -->
+{#                <td>
+                    <a href="{{ path('verb_show', { 'id': verb.id }) }}">show</a>
+                    <a href="{{ path('verb_edit', { 'id': verb.id }) }}">edit</a>
+                </td>#}
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <ul>
+    <!-- <ul>
         <li>
             <a href="{{ path('verb_new') }}">Create a new verb</a>
         </li>
-    </ul>
+    </ul> -->
 {% endblock %}

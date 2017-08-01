@@ -73,7 +73,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 11, ../sass/screen.scss */
-input[type="submit"], a {
+a.indexLink {
+  color: #eee;
+  text-decoration: none;
+}
+
+/* line 16, ../sass/screen.scss */
+input[type="submit"], a:not(.indexLink) {
   color: #ccc;
   border: 2px solid #ccc;
   height: 50px;
@@ -91,53 +97,72 @@ input[type="submit"], a {
   font-size: 0.8em;
 }
 
-/* line 28, ../sass/screen.scss */
-input[type="submit"]:hover, a:hover {
+/* line 32, ../sass/screen.scss */
+input[type="submit"]:hover, a:not(.indexLink):hover {
   color: #ddd;
   background-color: #111;
 }
 
-/* line 34, ../sass/screen.scss */
+/* line 38, ../sass/screen.scss */
 body {
   background-color: #111;
   color: #eee;
   font-family: arial;
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   width: 100%;
 }
 
-/* line 43, ../sass/screen.scss */
+/* line 47, ../sass/screen.scss */
 h1 {
   font-size: 2em;
   padding: 20px 0;
 }
 
-/* line 48, ../sass/screen.scss */
+/* line 52, ../sass/screen.scss */
 h2 {
   font-size: 1.4em;
   padding: 15px 0;
 }
 
-/* line 53, ../sass/screen.scss */
+/* line 57, ../sass/screen.scss */
 h3 {
   font-size: 1.2em;
   padding: 10px 0;
 }
 
-/* line 59, ../sass/screen.scss */
+/* line 63, ../sass/screen.scss */
 .control {
   text-align: center;
   padding-top: 20px;
 }
 
-/* line 65, ../sass/screen.scss */
+/* line 69, ../sass/screen.scss */
 .frame {
   margin: 0;
   font-size: 0;
 }
 
-/* line 70, ../sass/screen.scss */
+/* line 74, ../sass/screen.scss */
+table {
+  font-size: 20px;
+}
+/* line 77, ../sass/screen.scss */
+table.index {
+  width: 100%;
+  max-width: 1000px;
+}
+/* line 84, ../sass/screen.scss */
+table.index td a {
+  display: block;
+  padding: 10px 20px;
+}
+/* line 91, ../sass/screen.scss */
+table.index tr:nth-child(odd) td a {
+  background-color: #161616;
+}
+
+/* line 100, ../sass/screen.scss */
 .cell {
   display: block;
   width: 100%;
@@ -147,51 +172,51 @@ h3 {
   font-size: 20px;
 }
 
-/* line 81, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
 .cell h2 {
   color: #bbb;
 }
-/* line 85, ../sass/screen.scss */
+/* line 115, ../sass/screen.scss */
 .cell table {
   display: table;
 }
-/* line 88, ../sass/screen.scss */
+/* line 118, ../sass/screen.scss */
 .cell table td {
   line-height: 40px;
 }
-/* line 92, ../sass/screen.scss */
+/* line 122, ../sass/screen.scss */
 .cell table.pronouns {
   width: 70px;
 }
-/* line 96, ../sass/screen.scss */
+/* line 126, ../sass/screen.scss */
 .cell table.conjugation {
   width: 200px;
 }
-/* line 100, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 .cell table.conjugation td {
   font-weight: bold;
 }
 
-/* line 107, ../sass/screen.scss */
+/* line 137, ../sass/screen.scss */
 .headerCell {
   width: 100%;
   margin: 0 auto;
 }
 
-/* line 112, ../sass/screen.scss */
+/* line 142, ../sass/screen.scss */
 .inlineTable {
   display: inline-block;
   margin: 0;
   padding: 0;
 }
 
-/* line 119, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 table {
   display: table;
   margin: 20px auto;
 }
 
-/* line 126, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 input[type="text"] {
   width: 100%;
   box-sizing: border-box;
@@ -201,37 +226,37 @@ input[type="text"] {
   padding: 0 10px;
 }
 
-/* line 137, ../sass/screen.scss */
+/* line 167, ../sass/screen.scss */
 .translations label {
   display: none;
 }
 
 @media (min-width: 768px) {
-  /* line 148, ../sass/screen.scss */
+  /* line 178, ../sass/screen.scss */
   .cell {
     display: inline-block;
     width: 50%;
     max-width: none;
   }
 
-  /* line 154, ../sass/screen.scss */
+  /* line 184, ../sass/screen.scss */
   .headerCell {
     width: 100%;
   }
 }
 @media (min-width: 1000px) {
-  /* line 161, ../sass/screen.scss */
+  /* line 191, ../sass/screen.scss */
   .headerCell {
     width: 100%;
   }
 }
 @media (min-width: 1400px) {
-  /* line 168, ../sass/screen.scss */
+  /* line 198, ../sass/screen.scss */
   .cell {
     width: 25%;
   }
 
-  /* line 172, ../sass/screen.scss */
+  /* line 202, ../sass/screen.scss */
   .headerCell {
     width: 100%;
     margin: 0;
