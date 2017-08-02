@@ -35,16 +35,7 @@ class Verb
     protected $conjugations;
 
     /**
-     * @ORM\ManyToOne(
-     *      targetEntity="Verb",
-     *      inversedBy="name"
-     * )
-     * @ORM\JoinColumn(
-     *      name="verb_id",
-     *      referencedColumnName="id",
-     *      onDelete="CASCADE",
-     *      nullable=false
-     * )
+     * @ORM\OneToMany(targetEntity="Verb", mappedBy="name", cascade={"persist", "remove"})
      */
     protected $pastParticiple;
 
@@ -178,5 +169,29 @@ class Verb
     public function getTranslations()
     {
         return $this->translations;
+    }
+
+    /**
+     * Set pastParticiple
+     *
+     * @param \AppBundle\Entity\Verb $pastParticiple
+     *
+     * @return Verb
+     */
+    public function setPastParticiple(\AppBundle\Entity\Verb $pastParticiple)
+    {
+        $this->pastParticiple = $pastParticiple;
+
+        return $this;
+    }
+
+    /**
+     * Get pastParticiple
+     *
+     * @return \AppBundle\Entity\Verb
+     */
+    public function getPastParticiple()
+    {
+        return $this->pastParticiple;
     }
 }

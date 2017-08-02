@@ -44,10 +44,12 @@ class VerbController extends Controller
     {
         $verb = new Verb();
 
+        // -- get conjugation times
         $em = $this->getDoctrine()->getManager();
 
         $times = $em->getRepository('AppBundle:Time')->findAll();
 
+        // -- add a verbConjugation per time
         foreach ($times as $time) {
 
             $verbConjugation = new VerbConjugation();
@@ -57,11 +59,13 @@ class VerbController extends Controller
             $verb->getConjugations()->add($verbConjugation);
         }
 
+        // -- create and add first translation
         $verbTranslation = new verbTranslation();
 
         $verb->addTranslation($verbTranslation);
 
 
+        // -- create form
         $form = $this->createForm('AppBundle\Form\VerbType', $verb);
 
         $form->handleRequest($request);
