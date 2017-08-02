@@ -34,6 +34,19 @@ class Verb
      */
     protected $conjugations;
 
+    /**
+     * @ORM\ManyToOne(
+     *      targetEntity="Verb",
+     *      inversedBy="name"
+     * )
+     * @ORM\JoinColumn(
+     *      name="verb_id",
+     *      referencedColumnName="id",
+     *      onDelete="CASCADE",
+     *      nullable=false
+     * )
+     */
+    protected $pastParticiple;
 
     /**
      * @ORM\ManyToMany(targetEntity="AppBundle\Entity\VerbTranslation", cascade={"persist"})

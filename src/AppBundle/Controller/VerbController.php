@@ -59,8 +59,6 @@ class VerbController extends Controller
 
         $verbTranslation = new verbTranslation();
 
-        // $verbConjugation->setTime($time);
-
         $verb->addTranslation($verbTranslation);
 
 
